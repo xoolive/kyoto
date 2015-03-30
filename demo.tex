@@ -1,0 +1,113 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme{Kyoto}
+
+\usepackage{booktabs}
+\usepackage{minted}
+
+\usemintedstyle{trac}
+
+\title{Yet another beamer theme}
+\subtitle{}
+\date{\today}
+\author{Xavier Olive}
+\institute{Institute or miscellaneous information}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}[fragile]
+  \frametitle{Kyoto}
+
+  The \emph{Kyoto} is a Beamer theme derived from:
+  \begin{itemize}
+      \item the \texttt{Singapore} theme delivered by the beamer distribution;
+      \item the \texttt{progressbar} developed by Sylvain Bouveret;
+      \item and some core lines of code by Marco Barisione.
+  \end{itemize}.
+
+  Enable the theme by loading
+
+  \begin{minted}[fontsize=\small]{latex}
+    \documentclass{beamer}
+    \usetheme{Kyoto}
+  \end{minted}
+
+\end{frame}
+
+\section{Elements}
+
+\begin{frame}[fragile]
+  \frametitle{Typography}
+      \begin{minted}[fontsize=\small]{latex}
+The theme provides sensible defaults to \emph{emphasize}
+text, \alert{accent} parts or show \textbf{bold} results.
+      \end{minted}
+
+  \begin{center}becomes\end{center}
+
+  The theme provides sensible defaults to \emph{emphasize} text,
+  \alert{accent} parts or show \textbf{bold} results.
+\end{frame}
+\begin{frame}{Lists}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+      Items
+      \begin{itemize}
+        \item Milk \item Eggs \item Potatos
+      \end{itemize}
+
+    \column{0.5\textwidth}
+      Enumerations
+      \begin{enumerate}
+        \item First, \item Second and \item Last.
+      \end{enumerate}
+  \end{columns}
+\end{frame}
+\begin{frame}{Descriptions}
+  \begin{description}
+    \item[PowerPoint] Meeh.
+    \item[Beamer] Yeeeha.
+  \end{description}
+\end{frame}
+\begin{frame}{Animation}
+  \begin{itemize}[<+- | alert@+>]
+    \item \alert<4>{This is\only<4>{ really} important}
+    \item Now this
+    \item And now this
+  \end{itemize}
+\end{frame}
+\begin{frame}{Blocks}
+
+  \begin{block}{This is a block title}
+    This is soothing.
+  \end{block}
+
+\end{frame}
+\begin{frame}{Math}
+  \begin{equation*}
+    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+  \end{equation*}
+\end{frame}
+\begin{frame}{Quotes}
+  \begin{quote}
+    Veni, Vidi, Vici
+  \end{quote}
+\end{frame}
+
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+
+  Get the source of this theme and the demo presentation from
+
+  \begin{center}\url{github.com/xoolive/kyoto}\end{center}
+
+  The core lines by Marco Barisione being licensed under the GPL, this theme is
+  also licensed under the GPL.
+
+\end{frame}
+
+\end{document}

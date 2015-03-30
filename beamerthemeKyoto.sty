@@ -1,0 +1,21 @@
+\ProvidesPackage{beamerthemeKyoto}[2009/04/22]
+
+\RequirePackage{tikz}
+
+\usetheme{Singapore}
+
+\usecolortheme{Kyoto}
+\useoutertheme{Kyoto}
+
+\setbeamertemplate{frametitle} { \begin{flushleft} {\insertframetitle}\\[-3mm] \hrulefill \end{flushleft} \vspace{-5mm} }
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+
+
+% Automatic insertion of intermediate table of contents
+\makeatletter
+\define@key{beamertoc}{mysubsection}[]{\beamer@toc@subsectionstyle{show/shaded/hide}}
+\AtBeginSubsection[]{ \ifnum\thesubsection=1 \frame{\tableofcontents[currentsection,hideothersubsections]} \else \frame<handout:0>{\addtocounter{framenumber}{-1}\tableofcontents[currentsection,mysubsection]} \fi }
+\makeatother
+
